@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Media & Accessibility Demo</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+ body {
+ font-family: Arial, sans-serif;
+ margin: 20px;
+ line-height: 1.6;
+ }
+ section {
+ margin-bottom: 30px;
+ padding: 15px;
+ border: 1px solid #ccc;
+ }
+ h2 {
+ color: #2c3e50;
+ }
+ </style>
+</head>
+<body>
+<header role="banner">
+ <h1 id="pageTitle">HTML Media Tags & Accessibility Demo</h1>
+ <p aria-hidden="true">★ ★ ★</p>
+</header>
+<main role="main" aria-labelledby="pageTitle">
+ <!-- Picture Tag -->
+ <section>
+ <h2>Responsive Image (Picture Tag)</h2>
+ <picture>
+ <source srcset="large-image.jpg" media="(min-width: 800px)">
+ <source srcset="small-image.jpg" media="(max-width: 799px)">
+ <img src="default-image.jpg" alt="A green agricultural field under blue sky">
+ </picture>
+ </section>
+ <!-- Video Tag -->
+ <section>
+ <h2>Video Element</h2>
+ <video controls width="400" aria-label="Introduction video about campus facilities">
+ <source src="campus.mp4" type="video/mp4">
+ <source src="campus.webm" type="video/webm">
+ Your browser does not support the video tag.
+ </video>
+ </section>
+ <!-- Audio Tag -->
+ <section>
+ <h2>Audio Element</h2>
+ <audio controls aria-label="Background instrumental audio">
+ <source src="music.mp3" type="audio/mpeg">
+ <source src="music.ogg" type="audio/ogg">
+ Your browser does not support the audio element.
+ </audio>
+ </section>
+ <!-- Form with Accessibility -->
+ <section>
+ <h2 id="formHeading">Contact Form</h2>
+ <form aria-labelledby="formHeading">
+ <label for="name">Name:</label><br>
+ <input type="text" id="name" aria-label="Enter your name"><br><br>
+ <label for="email">Email:</label><br>
+ <input type="email" id="email" aria-label="Enter your email address"><br><br>
+ <button type="submit" aria-label="Submit contact form">Submit</button>
+ </form>
+ </section>
+</main>
+<footer role="contentinfo">
+ <p>&copy; 2026 Web Development Demo</p>
+</footer>
+</body>
+</html>
