@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML forms example</title>
+    <style>
+        body {
+            font-family: Arial,sans-serif;
+            background-color: aquamarine;
+        }
+        h2{
+            text-align:center;
+            color: gainsboro;
+        }
+        form{
+            width:350px;
+            margin:auto;
+            background-color: bisque;
+            padding:20px;
+            border-radius: 8px;
+            border:2px solid #3498db;
+        }
+        label{
+            font-weight:bold;
+        }
+        input, select, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        }
+        input[type="radio"],
+ input[type="checkbox"] {
+ width: auto;
+ margin-right: 5px;
+ }
+ .btn {
+ width: 48%;
+ padding: 10px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-weight: bold;
+ }
+ .submit-btn {
+ background-color: #2ecc71;
+ color: white;
+ }
+ .reset-btn {
+ background-color: #e74c3c;
+ color: white;
+ }
+    </style>
+</head>
+<body>
+   <h2>Student regestration form</h2>
+   <form>
+   <!--Text input-->
+   <label>Full Name:</label><br>
+   <input type="text" name="name"><br><br>
+    <!--Email input-->
+   <label>Email:</label><br>
+   <input type="text" name="email"><br><br>
+   <!--password input-->
+   <label>password Name:</label><br>
+   <input type="text" name="password"><br><br>
+   <!--Radio buttons-->
+   <label>Gender:</label><br>
+   <input type="radio" name="gender" value="male">Male
+   <input type="radio" name="gender" value="female">Female
+   <br><br>
+    <!--Check box-->
+    <label>Skills:</label><br>
+    <input type="checkbox" name="skill">HTML
+    <input type="checkbox" name="skill">CSS
+    <input type="checkbox" name="skill">Java script
+        <br><br>
+        <!--Drop down list-->
+        <label>Course:</label>
+        <select name="course">
+            <option>Web development</option>
+            <option>Data Science</option>
+            <option>AI & ML</option>
+        </select>
+        <br><br>
+        <!-- Text Area-->
+         <label>Adress</label>
+         <textarea rows="4" cols="30"></textarea><br><br>
+         <!--Submit & Reset button-->
+         <input type="submit" value="Register" class="btn submit btn">
+         <input type="reset" value="clear" class="btn reset-btn">
+    </form>
+</body>
+</html>
